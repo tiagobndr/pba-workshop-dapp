@@ -1,0 +1,27 @@
+[package]
+name = "xtransfers"
+version = "0.1.0"
+authors = ["Tiago Bandeira <tiago.bandeira@parity.io>"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "6.0.0-alpha", default-features = false }
+hex = { version = "0.4.3", default-features = false }
+
+[dev-dependencies]
+ink_e2e = { version = "6.0.0-alpha", default-features = false }
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "hex/std",
+]
+ink-as-dependency = []
+e2e-tests = []
+
+[package.metadata.ink-lang]
+abi = "sol"
