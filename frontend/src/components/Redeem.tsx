@@ -22,12 +22,10 @@ export function Redeem(params: {
 
   const { writeContract, status, data, error } = useWriteContract();
 
-  type ChainLabel = "Asset Hub" | "People" | "Coretime" | "Relay Chain";
+  type ChainLabel = "Asset Hub" | "Relay Chain";
 
   const chainOptions: Record<ChainLabel, number | null> = {
     "Asset Hub": 1000,
-    People: 1004,
-    Coretime: 1005,
     "Relay Chain": null,
   };
 
