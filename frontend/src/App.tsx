@@ -67,14 +67,16 @@ function App() {
         contractAddress={contractAddress}
         userAddresses={accountData.addresses}
       />
-      <Mint contractAddress={contractAddress} symbol={"NRXT"} />
-      <Redeem
-        contractAddress={contractAddress}
-        accounts={
-          accountData.addresses ? [...accountData.addresses] : undefined
-        }
-        symbol={"NRXT"}
-      />
+      <div className="flex items-start gap-4">
+        <Mint contractAddress={contractAddress} symbol={"NRXT"} />
+        <Redeem
+          contractAddress={contractAddress}
+          accounts={
+            accountData.addresses ? [...accountData.addresses] : undefined
+          }
+          symbol={"NRXT"}
+        />
+      </div>
     </>
   );
 }

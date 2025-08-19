@@ -2,7 +2,6 @@ import { notReallyACrossChainTokenModuleNotReallyACrossChainTokenAbi } from "../
 import { useWriteContract } from "wagmi";
 
 import { useState } from "react";
-import { generateXcmMessage } from "../utils/get-XCM-message";
 import { convertEthToSubstrate } from "../utils/convert-eth-to-ss58";
 import { u8aToHex } from "@polkadot/util";
 import { decodeAddress } from "@polkadot/util-crypto";
